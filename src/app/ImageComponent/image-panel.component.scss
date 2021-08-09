@@ -1,0 +1,34 @@
+%CanvasTemplate {
+  border: 1px solid black;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0px;
+}
+
+#CanvasContainer {
+  position: relative;
+  display: inline-block;
+  height: 400px;
+  width: 400px;
+
+  #ImageCanvas {
+    @extend %CanvasTemplate;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  #ImageBlackCanvas {
+    @extend %CanvasTemplate;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    filter: brightness(65%);
+  }
+}
+
+#FileInput {
+  display: block;
+}
